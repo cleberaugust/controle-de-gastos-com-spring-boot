@@ -32,7 +32,7 @@ public class GestaoDespesaPerformance {
         var despesas = repository.findAll();
 
         long fim = System.currentTimeMillis();
-        System.out.println("Tempo (sem paginaçã): " + (fim - inicio) + "ms");
+        System.out.println("Tempo (sem paginação): " + (fim - inicio) + "ms");
         return ResponseEntity.ok(despesas);
     }
 
@@ -44,7 +44,7 @@ public class GestaoDespesaPerformance {
         var despesas = repository.findAll(pageable);
         stopWatch.stop();
 
-        System.out.println("Tempo (com paginaçã): " + stopWatch.getTotalTimeMillis() + "ms");
+        System.out.println("Tempo (com paginação): " + stopWatch.getTotalTimeMillis() + "ms");
         return ResponseEntity.ok(despesas);
     }
 
